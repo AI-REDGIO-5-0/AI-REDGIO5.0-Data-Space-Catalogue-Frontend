@@ -1,13 +1,13 @@
 import { getToken } from '#auth';
 
 const {
-    public: { API_BASE_URL },
+    public: { apiBaseUrl },
 } = useRuntimeConfig();
 
 export default defineEventHandler(async (event) => {
     const token = await getToken({ event });
 
-    const data = await $fetch(`${API_BASE_URL}/api/cloud-catalog/organizations`, {
+    const data = await $fetch(`${apiBaseUrl}/api/cloud-catalog/organizations`, {
         method: 'GET',
         headers: {
             Authorization: `Bearer ${token?.access_token}`,

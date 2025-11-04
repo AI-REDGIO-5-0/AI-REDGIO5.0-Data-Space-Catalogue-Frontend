@@ -117,7 +117,6 @@ const trustOptions = [
 
 const handleTrustLevelChange = async (orgId: string, value: number) => {
     trustLevels.value[orgId] = value;
-    console.log('Updating trust level for orgId:', orgId, 'to value:', value);
 
     try {
         await $fetch('/api/organizations/trustLevel', {

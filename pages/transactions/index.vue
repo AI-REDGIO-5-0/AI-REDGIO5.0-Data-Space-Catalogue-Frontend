@@ -5,6 +5,7 @@ import { useI18n } from 'vue-i18n';
 import {licenses, sectors} from '~/constants'
 import { useRamda } from '~/constants/ramda';
 const { t } = useI18n();
+const {data: session} = useAuth()
 
 
 const sort = ref({
@@ -20,7 +21,7 @@ const monthlyOutcome = ref(0);
 const isHovered = ref();
 const { data: transactionsData } = await useLazyFetch(`/api/datasets/get-all-transactions`, {
     method: 'GET',
-    query:{id:'0cfe7ac0-f230-4cb5-91da-dc724d2c93ae'}
+    query:{id:session.value?.user?.sub}
 });
 
 const transactionsColumns: any = [

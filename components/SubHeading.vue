@@ -16,7 +16,7 @@ const props = defineProps({
     },
 });
 const {data: session} = useAuth()
-console.log(session.value?.user?.sub, props.user);
+
 const owned = computed(() => {
     if (session.value?.user?.sub === props.user) return true;
     return false;

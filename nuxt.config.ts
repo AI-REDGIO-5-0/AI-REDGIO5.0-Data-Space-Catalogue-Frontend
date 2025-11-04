@@ -2,14 +2,15 @@
 export default defineNuxtConfig({
   runtimeConfig: {
     public: {
-      API_BASE_URL: process.env.CLOUD_API_URL,
-      API_CONSUMER_URL: process.env.PARTICIPANT_API_URL,
+      apiBaseUrl: '',
+      apiConsumerUrl: '',
     },
     keycloak: {
         issuer: '',
         clientId: '',
         clientSecret: '',
     },
+    authSecret: '',
   },
   compatibilityDate: '2024-11-01',
    // Disable server-side rendering

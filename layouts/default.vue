@@ -33,13 +33,13 @@ const navigation = ref([
 
 const userNavigation = ref([{ name: 'user.user', to: '/user', target: '_self', icon: '', external: false }]);
 
-const notificationCount = ref(0);
+// const notificationCount = ref(0);
 
-const { refresh } = useFetch('/api/notifications/count', {
-    onResponse({ response }) {
-        notificationCount.value = response._data;
-    },
-});
+// const { refresh } = useFetch('/api/notifications/count', {
+//     onResponse({ response }) {
+//         notificationCount.value = response._data;
+//     },
+// });
 
 // const computedNotifications = computed(() => messagesStore.getMessages);
 
@@ -50,7 +50,7 @@ const { refresh } = useFetch('/api/notifications/count', {
 //     },
 //     { deep: true },
 // );
-const notificationsNumberText = computed(() => (notificationCount.value > 9 ? '9+' : notificationCount.value));
+// const notificationsNumberText = computed(() => (notificationCount.value > 9 ? '9+' : notificationCount.value));
 </script>
 
 <template>
@@ -86,7 +86,7 @@ const notificationsNumberText = computed(() => (notificationCount.value > 9 ? '9
                     </div>
                     <div class="hidden md:block">
                         <div class="ml-4 flex items-center md:ml-6">
-                            <UButton
+                           <!-- <UButton
                                 type="button"
                                 class="flex gap-1 items-center relative rounded-full bg-primary-900 h-10 p-1.5 text-primary-100 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-600 mr-1"
                                 to="/notifications"
@@ -100,7 +100,7 @@ const notificationsNumberText = computed(() => (notificationCount.value > 9 ? '9
                                     {{ notificationsNumberText }}
                                 </div>
                                 <UIcon name="i-heroicons-bell" class="h-7 w-7" aria-hidden="true" />
-                            </UButton>
+                            </UButton> -->
 
                             <!-- Profile dropdown -->
                             <!-- v-if="status === 'authenticated'" -->
@@ -199,7 +199,7 @@ const notificationsNumberText = computed(() => (notificationCount.value > 9 ? '9
                             <div class="text-base font-medium text-white">{{ session?.user?.name }}</div>
                             <div class="text-sm font-medium text-primary-300">{{ session?.user?.email }}</div>
                         </div> -->
-                        <UButton
+                        <!-- <UButton
                             type="button"
                             class="flex gap-1 items-center relative rounded-full bg-primary-70 h-10 p-1.5 text-primary-100 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-600"
                             to="/notifications"
@@ -213,7 +213,7 @@ const notificationsNumberText = computed(() => (notificationCount.value > 9 ? '9
                                 {{ notificationsNumberText }}
                             </div>
                             <UIcon name="i-heroicons-bell" class="h-7 w-7" aria-hidden="true" />
-                        </UButton>
+                        </UButton> -->
                     </div>
                     <!-- <UButton v-else class="ml-5" @click="signIn('keycloak')">
                         <ArrowRightOnRectangleIcon class="h-4 w-4" />

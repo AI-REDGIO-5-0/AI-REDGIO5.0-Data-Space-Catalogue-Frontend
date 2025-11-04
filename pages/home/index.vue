@@ -1,6 +1,7 @@
 <script setup lang="ts">
 // const R = useRamda();
 import dayjs from 'dayjs';
+import { values } from 'ramda';
 import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
@@ -158,7 +159,8 @@ const submitAll = async () => {
     }
 
     let body = {
-        ...selected.value
+        ...selected.value,
+        orgName:session.value?.user?.orgName
     };
 
     try {

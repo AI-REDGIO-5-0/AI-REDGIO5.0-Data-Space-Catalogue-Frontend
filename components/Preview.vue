@@ -26,7 +26,7 @@ const getLicenseName = (licenseId: any) => {
     const license = licenses.find(item => item.id === Number.parseInt(licenseId));
     return license?.name;
 }
-// console.log(props.monetizationDetails)
+
 const emit = defineEmits(['handlePageSelectionBackwards', 'submitAll']);
 </script>
 

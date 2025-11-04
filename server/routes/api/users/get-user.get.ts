@@ -1,7 +1,7 @@
 // import { getToken } from '#auth';
 
 const {
-    public: { API_BASE_URL },
+    public: { apiBaseUrl },
     catalogName,
 } = useRuntimeConfig();
 
@@ -10,7 +10,7 @@ export default defineEventHandler(async (event) => {
 
     const query = getQuery(event);
 
-    return await $fetch(`${API_BASE_URL}/api/user/${query.id}`, {
+    return await $fetch(`${apiBaseUrl}/api/user/${query.id}`, {
         headers: {
             // Authorization: `Bearer ${token?.access_token}`,
         },
