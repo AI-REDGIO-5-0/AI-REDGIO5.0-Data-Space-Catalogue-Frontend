@@ -38,7 +38,7 @@ const callbackUrl = '/home';
                             <!-- v-if="status === 'authenticated'" -->
                             <NuxtLink
                                 
-                                :to="'/home/'"
+                                :to="''"
                                 class="flex-shrink-0 rounded-md px-4 py-2 text-lg font-medium text-white hover:primary-text-950 hover:border hover:border-white cursor-pointer transition-all"
                                 >Home</NuxtLink
                             >
@@ -53,9 +53,9 @@ const callbackUrl = '/home';
                         <h2 class="text-white font-semibold text-center tracking-wide text-2xl xl:text-4xl">
                             Cloud Catalog
                         </h2>
-                        <p class="font-light text-center tracking-wider text-sm lg:text-base text-white max-w-4xl">
+                        <!-- <p class="font-light text-center tracking-wider text-sm lg:text-base text-white max-w-4xl">
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                        </p>
+                        </p> -->
                         <!-- Sign In button -->
                         
                         <div  class="flex" v-if="status !== 'authenticated'">

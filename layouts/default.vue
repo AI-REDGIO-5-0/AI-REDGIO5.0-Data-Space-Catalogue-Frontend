@@ -31,7 +31,7 @@ const navigation = ref([
     { name: 'organizations.organizations', to: '/organizations', target: '_self', icon: '', external: false },
 ]);
 
-const userNavigation = ref([{ name: 'user.user', to: '/user', target: '_self', icon: '', external: false }]);
+// const userNavigation = ref([{ name: 'user.user', to: '/user', target: '_self', icon: '', external: false }]);
 
 // const notificationCount = ref(0);
 
@@ -71,7 +71,7 @@ const userNavigation = ref([{ name: 'user.user', to: '/user', target: '_self', i
                                     :to="item.to"
                                     :target="item.target"
                                     :external="item.external"
-                                    class="text-white hover:bg-primary-600 hover:bg-opacity-75 rounded-md px-3 py-2 text-sm font-medium"
+                                    class="text-primary-400 hover:bg-primary-400 hover:bg-opacity-80 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                                     active-class="bg-primary-800"
                                 >
                                     {{ $t(item.name) }}
@@ -129,7 +129,7 @@ const userNavigation = ref([{ name: 'user.user', to: '/user', target: '_self', i
                                     <MenuItems
                                         class="absolute right-0 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                                     >
-                                        <MenuItem v-for="item in userNavigation" :key="item.name" v-slot="{ active }">
+                                        <!-- <MenuItem v-for="item in userNavigation" :key="item.name" v-slot="{ active }">
                                             <a
                                                 :class="[
                                                     active ? 'bg-primary-100' : '',
@@ -137,7 +137,7 @@ const userNavigation = ref([{ name: 'user.user', to: '/user', target: '_self', i
                                                 ]"
                                                 >{{ $t(item.name) }}</a
                                             >
-                                        </MenuItem>
+                                        </MenuItem> -->
                                         <MenuItem v-slot="{ active }">
                                             <a
                                                 href="javascript:void(0)"
@@ -220,14 +220,14 @@ const userNavigation = ref([{ name: 'user.user', to: '/user', target: '_self', i
                         <span class="text-sm whitespace-nowrap">{{ $t('user.signIn') }}</span>
                     </UButton> -->
                     <div class="mt-3 space-y-1 px-2">
-                        <DisclosureButton
+                        <!-- <DisclosureButton
                             v-for="item in userNavigation"
                             :key="item.name"
                             as="a"
                             class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-primary-500 hover:bg-opacity-75"
                         >
                             {{ $t(item.name) }}</DisclosureButton
-                        >
+                        > -->
                     </div>
                 </div>
             </DisclosurePanel>
@@ -238,7 +238,7 @@ const userNavigation = ref([{ name: 'user.user', to: '/user', target: '_self', i
         <footer class="bg-primary-900 flex p-4 text-xs justify-center align-center">
             <div class="flex w-full max-w-[1210px] gap-4">
                 <img class="w-12 h-8" src="/img/eu_flag.jpeg" alt="PISTIS logo" />
-                <p class="text-white">
+                <p class="text-primary-400">
                     This project has received funding from the European Union under Grant Agreement n° 101092069. Views
                     and opinions expressed are however those of the author(s) only and do not necessarily reflect those
                     of the European Union or the European Commission. Neither the European Union nor the granting
